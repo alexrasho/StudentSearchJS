@@ -1,0 +1,34 @@
+.flex-container1>div {
+  display: block;
+  width: 314px;
+  line-height: 30px;
+  font-size: 16px;
+  padding: 10px;
+  border-style: inset;
+  border-color: lightblue;
+}
+
+.topbox {
+  /*first flex container for small grey boxes*/
+  display: inline-block;
+  flex-wrap: nowrap;
+  margin-left: 100px;
+  height: 10px;
+  width: 575px;
+  margin-right: 100px;
+  border-style: inset;
+  border-color: lightblue;
+  text-align: center;
+  padding: 50px;
+}
+
+.flex-container1 {
+  /*first flex container for small grey boxes*/
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  height: 300px;
+  width: 680px;
+  margin-right: 100px;
+  background-color: white;
+}

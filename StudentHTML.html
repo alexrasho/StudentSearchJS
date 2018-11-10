@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="StudentCSS.css">
+  <style>
+  table, th, td {
+  border: 1px solid black;
+  height: 30px;
+  margin-top: 7px;
+  }
+</style>
+</head>
+<body>
+  <div class = "topbox">
+    Last Name: <input type="text" name="name" id="a" size="30" maxlength="70">
+ &emsp; &emsp; &emsp;
+    <button type="button" id="searchButton" >Search</button>
+  </div>
+  <div class="flex-container1">
+    <div>Students Found:<ul id="studentList"></ul></div>
+    <div>Grades for: &emsp;<a id =student>Student</a><br>
+      <table id="studentTable" table style="width:100%">
+    <tr>
+      <th>Course</th>
+      <th>GPA</th>
+    </tr>
+    <tr>
+      <td id="Course1"></td>
+      <td id="Grade1"></td>
+    </tr>
+    <tr>
+      <td id="Course2"></td>
+      <td id="Grade2"></td>
+    </tr>
+    <tr>
+      <td id="Course3"></td>
+      <td id="Grade3"></td>
+    </tr>
+  </table></div>
+  </div>
+   <script src="Studentjs.js"></script>
+</body>
+</html>
