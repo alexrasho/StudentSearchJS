@@ -58,8 +58,18 @@ var studentView2 = { //view for the student table
   render: function() { //output function 2
     var students = controller.getStudents();
     var selectedStudent = document.getElementById('a').value;
+    var str = ""
+
+    for (var i = 0; i <= students.lastName.length; i++) { //display the student
+      if (students.lastName[i] == selectedStudent) {
+        str += students.firstName[i] + " " + students.lastName[i];
+      }
+    }
+    document.getElementById('student').innerHTML = str;
+
     var table = document.getElementById("studentTable");
-    for (var i = 0; i < students.lastName.length; i++) {
+
+    for (var i = 0; i < students.lastName.length; i++) { //output to left columns
       if (selectedStudent == students.lastName[i]) {
         i *= 3 //to get the correct course
         for (var r = 1, n = table.rows.length; r < n; r++) {
@@ -69,7 +79,7 @@ var studentView2 = { //view for the student table
             //                console.log(students.Grades.Courses[i])
           }
         }
-        for (var r = 1, n = table.rows.length; r < n; r++) {
+        for (var r = 1, n = table.rows.length; r < n; r++) { //output to right columns
           for (var c = 1, m = table.rows[r].cells.length; c < m; c += 2) {
             table.rows[r].cells[c].innerHTML = students.Grades.Grade[i];
             i++;
